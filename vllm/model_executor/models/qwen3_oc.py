@@ -383,8 +383,20 @@ class Qwen3DecoderLayer(nn.Module):
         if layer_idx in [4,7,34,35,2]:
             self.self_attn = IdentityAttention(
                 hidden_size=self.hidden_size,
+                num_heads=config.num_attention_heads,
+                max_position=config.max_position_embeddings,
+                num_kv_heads=config.num_key_value_heads,
+                rms_norm_eps=config.rms_norm_eps,
+                qkv_bias=getattr(config, "attention_bias", False),
+                head_dim=getattr(config, "head_dim", None),
+                cache_config=cache_config,
+                quant_config=quant_config,
+                rope_parameters=config.rope_parameters,
                 prefix=f"{prefix}.self_attn",
+                attn_type=attn_type,
+                dual_chunk_attention_config=dual_chunk_attention_config,
             )
+
         elif layer_idx in [11,31, 30,  3,5,6,10,12,13,14,27,28,29,32,33 ,  1,26, 25,15]:
             self.self_attn = SWAttention(
                 hidden_size=self.hidden_size,
