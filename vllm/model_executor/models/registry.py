@@ -203,6 +203,8 @@ _TEXT_GENERATION_MODELS = {
     "TeleFLMForCausalLM": ("teleflm", "TeleFLMForCausalLM"),
     "XverseForCausalLM": ("llama", "LlamaForCausalLM"),
     "Zamba2ForCausalLM": ("zamba2", "Zamba2ForCausalLM"),
+    "JetNemotronForCausalLM": ("jet_nemotron", "JetNemotronForCausalLM"),
+    "Qwen3OCForCausalLM": ("qwen3_oc", "Qwen3OCForCausalLM"),
 }
 
 _EMBEDDING_MODELS = {
