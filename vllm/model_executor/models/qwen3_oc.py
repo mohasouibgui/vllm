@@ -486,7 +486,7 @@ class Qwen3Model(Qwen2Model):
         )
 
 
-class Qwen3OCForCausalLM(nn.Module, SupportsLoRA, SupportsPP, SupportsEagle3):
+class Qwen3_Hybrid_OC_ForCausalLM(nn.Module, SupportsLoRA, SupportsPP, SupportsEagle3):
     packed_modules_mapping = {
         "qkv_proj": [
             "q_proj",

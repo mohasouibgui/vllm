@@ -204,7 +204,7 @@ _TEXT_GENERATION_MODELS = {
     "XverseForCausalLM": ("llama", "LlamaForCausalLM"),
     "Zamba2ForCausalLM": ("zamba2", "Zamba2ForCausalLM"),
     "JetNemotronForCausalLM": ("jet_nemotron", "JetNemotronForCausalLM"),
-    "Qwen3OCForCausalLM": ("qwen3_oc", "Qwen3OCForCausalLM"),
+    "Qwen3_Hybrid_OC_ForCausalLM": ("qwen3_oc", "Qwen3_Hybrid_OC_ForCausalLM"),
 }
 
 _EMBEDDING_MODELS = {
