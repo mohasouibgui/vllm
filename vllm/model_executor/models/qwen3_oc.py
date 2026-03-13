@@ -244,8 +244,8 @@ class IdentityAttention(nn.Module):
             if dual_chunk_attention_config
             else {},
         )
-        self.q_norm = RMSNorm(self.head_dim, eps=rms_norm_eps)
-        self.k_norm = RMSNorm(self.head_dim, eps=rms_norm_eps)
+        # self.q_norm = RMSNorm(self.head_dim, eps=rms_norm_eps)
+        # self.k_norm = RMSNorm(self.head_dim, eps=rms_norm_eps)
     def forward(
         self,
         positions: torch.Tensor,
